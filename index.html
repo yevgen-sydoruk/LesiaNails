@@ -19,9 +19,9 @@
                     </a>
                     <nav class="header__nav">
                         <ul class="header__nav-menu">
-                            <li class="header__nav-item"><a href="#">Маникюр</a></li>
-                            <li class="header__nav-item"><a href="#">Педикюр</a></li>
-                            <li class="header__nav-item"><a href="#">Мои работы</a></li>
+                            <li class="header__nav-item"><a href="#manicure">Маникюр</a></li>
+                            <li class="header__nav-item"><a href="#pedicure">Педикюр</a></li>
+                            <li class="header__nav-item"><a href="#gallery">Мои работы</a></li>
                             <div class="header__nav-lang">
                                 <div class="selected-lang">RU</div>
                                 <ul>
@@ -30,7 +30,7 @@
                                     <li><a href="#">UA</a></li>
                                 </ul>
                             </div>
-                            <button class="header__nav-button button--book">Записаться</button>
+                            <button class="header__nav-button button--book" id="open-pop-up">Записаться</button>
                             <!-- link to form -->
                         </ul>
                         <!-- соцсети -->
@@ -49,6 +49,7 @@
                 </div>
             </div>
         </header>
+
         <section class="intro">
             <div class="wrapper">
                 <div class="intro__container">
@@ -64,14 +65,14 @@
                         <button class="intro__content-button button--book">Записаться</button>
                     </div>
                     <div class="intro__img">
-                        <img src="img/pexels-cottonbro-studio-3997379.jpg" alt="Nails" />
+                        <img src="img/intro.jpg" alt="Nails" />
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="service">
-            <div class="service__container">
+            <div class="service__container" id="manicure">
                 <div class="service__content">
                     <p class="service__special">Маникюр</p>
                     <h2 class="service__content-header">Услуги Маникюра</h2>
@@ -94,13 +95,14 @@
                     </ul>
                     <button class="service__content-button button--book">Записаться</button>
                 </div>
-                <div class="service__img">
-                    <img src="img/pexels-cottonbro-studio-3997379.jpg" alt="Nails" />
+                <div class="service__img manicure-img">
+                    <img src="img/services-manicure.jpg" alt="Manicure" />
                 </div>
             </div>
-            <div class="service__container pedicure">
-                <div class="service__img">
-                    <img src="img/pexels-cottonbro-studio-3997379.jpg" alt="Nails" />
+
+            <div class="service__container pedicure" id="pedicure">
+                <div class="service__img pedicure-img">
+                    <img src="img/services-pedicure.jpg" alt="Pedicure" />
                 </div>
                 <div class="service__content">
                     <p class="service__special">Педикюр</p>
@@ -126,6 +128,82 @@
                         </li>
                     </ul>
                     <button class="service__content-button button--book">Записаться</button>
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="gallery">
+            <!-- при нажатии фото должно выходить во всю величину -->
+            <div class="gallery-content">
+                <h2 class="gallery-heading">Gallery</h2>
+                <p class="gallery-text">Work I'm so proud of</p>
+            </div>
+            <div class="gallery-palette">
+                <div class="gallery-img">
+                    <img src="/img/gallery/1.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/2.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/3.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/4.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/5.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/6.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/7.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/8.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/9.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/10.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/11.jpg" alt="Nails example" />
+                </div>
+                <div class="gallery-img">
+                    <img src="/img/gallery/12.jpg" alt="Nails example" />
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="wrapper">
+                <div class="contact__container">
+                    <div class="contact__content">
+                        <p class="contact__special">Contact us</p>
+                        <h2 class="contact__header">WANT TO PAMPER YOUR NAILS?</h2>
+                        <p class="contact__text">Enter your phone number, and we will call you back ASAP.</p>
+                    </div>
+                    <form class="contact-form" action="#" id="form">
+                        <label for="formName">Your name*:</label>
+                        <input type="text" id="formName" placeholder="Your name*" name="name" class="_req" />
+                        <label for="formEmail">Your email*:</label>
+                        <input type="text" id="formEmail" placeholder="Your email*" name="email" class="_req _email" />
+                        <label for="phone">Your phone*:</label>
+                        <input type="tel" id="phone" placeholder="Your phone number*" name="phone" class="_req" />
+                        <label for="date">Choose date:</label>
+                        <input type="date" id="date" placeholder="Choose date" name="date" />
+                        <label for="textarea" class="_req" id="message">Leave you message:</label>
+                        <textarea
+                            id="textarea"
+                            name="w3review"
+                            rows="4"
+                            cols="50"
+                            placeholder="Leave you message here..."
+                        ></textarea>
+                        <button class="button--book">Send</button>
+                    </form>
                 </div>
             </div>
         </section>

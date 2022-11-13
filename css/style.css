@@ -1,8 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1;
   font-size: 16px;
   font-family: 'Noto Serif', serif;
-
   color: #212121;
   z-index: 1;
 }
@@ -163,17 +166,6 @@ body {
 .header__small-menu {
   display: none;
 }
-
-.burger__nav {
-}
-
-
-
-/*
-
-
-*/
-
 
 @media (max-width: 1439.98px) {
   .header__nav {
@@ -401,8 +393,8 @@ body {
 .service__content {
   box-sizing: border-box;
   width: 50%;
-  margin: auto 0;
-  padding: 0 40px 0;
+  margin: 40px 0;
+  padding: 0 60px 0;
 }
 .service__special {
   margin-bottom: 20px;
@@ -457,10 +449,24 @@ body {
 }
 .service__img {
   width: 50%;
+  height: 700px;
+  overflow: hidden;
 }
+
+/* .manicure-img {
+  background: url('../img/services-manicure.jpg') center / cover no-repeat;
+}
+
+.pedicure-img {
+  background: url('../img/services-pedicure.jpg') center / cover no-repeat;
+} */
+
 .service__img img{
   width: 100%;
   height: 100%;
+ 
+  object-fit: cover;
+  object-position: center;
 }
 .pedicure {
   background-color: #F8EDEB;
@@ -513,8 +519,200 @@ body {
   .service__img {
     order: 2;
     width: 100%;
+    height: 300px;
   }
  .service__img:last-child {
     display: none;
+  }
+}
+
+
+/* ================================ Gallery ======================== */
+
+.gallery {
+}
+.gallery-content {
+  margin: 40px 0;
+}
+.gallery-heading {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+    font-size: 40px;
+    color: #CE7F86;
+    font-style: italic;
+}
+.gallery-heading::after,
+.gallery-heading::before{
+  display: block;
+  content: ".";
+  font-size: 0;
+  width: 20px;
+  height: 1px;
+  background: #CE7F86;
+  margin: 0 0 0 10px;
+}
+.gallery-heading::before {
+  margin: 0 10px 0 0;
+}
+
+.gallery-text {
+  font-size: 16px;
+    color: #666070;
+    text-align: center;
+}
+.gallery-palette {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  
+  flex-wrap: wrap;
+}
+.gallery-img {
+  width: 25%;
+  
+}
+.gallery-img img{
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 963.98px) {
+  .gallery-img {
+    width: 50%; 
+  }
+}
+
+/* ==================================== Contacts =========================== */
+
+.contact {
+  background-color: #F8EDEB;
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+.contact__content{
+ 
+  /* display: flex;
+  flex-direction: column;
+  justify-items: center; */
+}
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__special {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #CE7F86;
+  font-style: italic;
+}
+.contact__special::after,
+.contact__special::before{
+  display: block;
+  content: ".";
+  font-size: 0;
+  width: 20px;
+  height: 1px;
+  background: #CE7F86;
+  margin: 0 0 0 10px;
+}
+.contact__special::before {
+  margin: 0 10px 0 0;
+}
+.contact__header {
+  margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 1.2;
+    color: #2B2B45;
+    text-align: center;
+}
+.contact__text {
+  margin-bottom: 40px;
+  font-size: 19px;
+  line-height: 1.2;
+  color: #38334F;
+  text-align: center;
+}
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.contact-form::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9) url("../img/loading.gif") center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.contact-form.sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+.contact-form input {
+  padding: 10px;
+  border: none;
+}
+
+.contact-form input:focus {
+  box-shadow: 0 0 15px #911439;
+}
+
+.contact-form input._error {
+  box-shadow: 0 0 15px red;
+}
+
+
+.contact-form button {
+  position: relative;
+  padding: 5px 15px;
+  width: 50%;
+  font-family: inherit;
+  border: 1px solid #911439;
+  background: #911439;
+  color: white;
+  outline: none;
+  transition: all 400ms ease;
+  cursor: pointer;
+  font-size: 24px;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1136.98px) {
+  .contact-form {
+    width: 75%;
+  }
+}
+
+@media (max-width: 963.98px) {
+  .contact-form button {
+    width: 100%;
   }
 }
