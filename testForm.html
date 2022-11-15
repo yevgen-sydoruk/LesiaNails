@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LesiaNails</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif:regular,italic,700,700italic" rel="stylesheet" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Fonts, css, <meta> -->
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrapper">
+                <div class="header__content">
+                    <a href="/index.html" class="header__logo">
+                        <img src="./img/logo1.svg" alt="LesiaNails Logo" class="header__logo-svg" />
+                    </a>
+                    <nav class="header__nav">
+                        <ul class="header__nav-menu">
+                            <li class="header__nav-item"><a href="#manicure">Маникюр</a></li>
+                            <li class="header__nav-item"><a href="#pedicure">Педикюр</a></li>
+                            <li class="header__nav-item"><a href="#gallery">Мои работы</a></li>
+                            <li class="header__nav-item"><a href="/testForm.html">testform</a></li>
+                            <div class="header__nav-lang">
+                                <div class="selected-lang">RU</div>
+                                <ul>
+                                    <li><a href="#">RU</a></li>
+                                    <li><a href="#">ENG</a></li>
+                                    <li><a href="#">UA</a></li>
+                                </ul>
+                            </div>
+                            <button class="header__nav-button button--book" id="open-pop-up">Записаться</button>
+                            <!-- link to form -->
+                        </ul>
+                        <!-- соцсети -->
+                    </nav>
+                    <div class="header__small-menu">
+                        <div class="header__nav-lang header__nav-lang-burger">
+                            <div class="selected-lang">RU</div>
+                            <ul>
+                                <li><a href="#">RU</a></li>
+                                <li><a href="#">ENG</a></li>
+                                <li><a href="#">UA</a></li>
+                            </ul>
+                        </div>
+                        <a href="#menu" id="burger" class="burger__nav"><span></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="contact">
+            <div class="wrapper">
+                <div class="contact__container">
+                    <div class="contact__content">
+                        <p class="contact__special">Contact us</p>
+                        <h2 class="contact__header">WANT TO PAMPER YOUR NAILS?</h2>
+                        <p class="contact__text">Enter your phone number, and we will call you back ASAP.</p>
+                    </div>
+                    <form class="contact-form" action="#" id="form">
+                        <label for="formName">Your name*:</label>
+                        <input type="text" id="formName" placeholder="Your name*" name="name" class="_req" />
+                        <label for="formEmail">Your email*:</label>
+                        <input type="text" id="formEmail" placeholder="Your email*" name="email" class="_req _email" />
+                        <label for="phone">Your phone*:</label>
+                        <input type="tel" id="phone" placeholder="Your phone number*" name="phone" class="_req" />
+                        <label for="date">Choose date:</label>
+                        <input type="date" id="date" placeholder="Choose date" name="date" />
+                        <label for="textarea" class="_req" id="message">Leave you message:</label>
+                        <textarea
+                            id="textarea"
+                            name="w3review"
+                            rows="4"
+                            cols="50"
+                            placeholder="Leave you message here..."
+                        ></textarea>
+                        <button class="button--book">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

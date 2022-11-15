@@ -19,15 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: formData,
             });
 
-            if (resposse.ok) {
+            if (response.ok) {
                 let result = await response.json();
                 alert(result.message);
                 formPreview.innerHTML = "";
                 form.reset();
-                form.classList.remove(_sending);
+                form.classList.remove("_sending");
             } else {
                 alert("Error");
-                form.classList.remove(_sending);
+                form.classList.remove("_sending");
             }
         } else {
             alert("Fields must be filled correctly");
